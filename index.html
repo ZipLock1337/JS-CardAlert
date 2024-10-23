@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Alert</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Error modal -->
+        <div class="modal_error">
+            <!-- Modal header -->
+            <div class="error_head">
+                <button onclick="toggleModal('error')" class="close_button error_btn">&times;</button>
+                <h1>Error!</h1>
+            </div>
+            <!-- Modal body -->
+            <div class="error_body">
+                <p>Change a few thing up and try submitting again.</p>
+                <a class="link_error" href="#!">Directory</a>
+            </div>
+        </div>
+
+        <!-- warning modal -->
+        <div class="modal_warning">
+            <!-- Modal header -->
+            <div class="warning_head">
+                <button onclick="toggleModal('warning')" class="close_button warning_btn">&times;</button>
+                <h1>Warning!</h1>
+            </div>
+            <!-- Modal body -->
+            <div class="warning_body">
+                <p>Sorry, there was a problem with your request.</p>
+                <a class="link_warning" href="#!">Technical support</a>
+            </div>
+        </div>
+
+        <!-- success modal -->
+        <div class="modal_success">
+            <!-- Modal header -->
+            <div class="success_head">
+                <button onclick="toggleModal('success')" class="close_button success_btn">&times;</button>
+                <h1>Success!</h1>
+            </div>
+            <!-- Modal body -->
+            <div class="success_body">
+                <p>The action was completed successfully!</p>
+            </div>
+        </div>
+
+        <!-- info modal -->
+        <div class="modal_info">
+            <!-- Modal header -->
+            <div class="info_head">
+                <button onclick="toggleModal('info')" class="close_button info_btn">&times;</button>
+                <h1>Help!</h1>
+            </div>
+            <!-- Modal body -->
+            <div class="info_body">
+                <p>Are you having problems?</p>
+                <a class="link_info" href="#!">Contact form</a>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Card section with buttons -->
+        <div class="card">
+            <!-- Info button -->
+            <button class="card_btn" onclick="toggleModal('info')">
+                <i class="fas fa-info-circle custom_info"></i>
+            </button>
+
+            <!-- Success button -->
+            <button class="card_btn" onclick="toggleModal('success')">
+                <i class="fas fa-check-circle custom_success"></i>
+            </button>
+
+            <!-- Warning button -->
+            <button class="card_btn" onclick="toggleModal('warning')">
+                <i class="fas fa-exclamation-triangle custom_warning"></i>
+            </button>
+
+            <!-- Error button -->
+            <button class="card_btn" onclick="toggleModal('error')">
+                <i class="fas fa-times-circle custom_error"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
